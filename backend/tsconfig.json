@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "baseUrl": "./..",
+        "paths": {
+            "@mr/*": ["shared/types/*"]
+        },
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true
+    }
+}
