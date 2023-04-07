@@ -1,0 +1,29 @@
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin {
+    height: 40px;
+    width: 40px;
+}
+
+.spin::before {
+    animation: 1.5s linear infinite spinner;
+    border: solid 5px rgba(0, 0, 0, 0.25);
+    border-bottom-color: #3b82f6;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fadein {
+    animation: 0.5s linear fadein;
+}

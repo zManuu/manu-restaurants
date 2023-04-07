@@ -1,3 +1,5 @@
 <template>
-  ABC
+  <div>
+    Welcome!
+  </div>
 </template>
