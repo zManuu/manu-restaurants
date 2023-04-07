@@ -1,14 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './style/tailwind.css'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import router from './router'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
-library.add(fas)
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes: [
+        {
+            path: '/',
+            component: () => import('@/views/Home.vue')
+        }
+    ]
+})
 
 createApp(App)
     .use(router)
-    .component('fa', FontAwesomeIcon)
     .mount('#app')
