@@ -17,7 +17,7 @@
     ],
     "paths": {
       "@/*": ["src/*"],
-      "@mr/*": ["../shared/types/*"]
+      "@shared/*": ["../shared/types/*"]
     },
     "lib": [
       "esnext",

@@ -1,7 +1,8 @@
 /**
- * * Imports all the http handlers here
+ * * Import all the http handlers here
  */
 
+import './admin/Login.js'
 import './GetRestaurants.js'
 import './CreateRestaurant.js'
 import './GetOffers.js'

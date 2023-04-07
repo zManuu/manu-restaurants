@@ -1,8 +1,8 @@
-import Offer from '../../models/Offer.js'
-import { app, db } from '../../app.js'
-import { ReqType } from '../../types.js'
-import { ICreateOfferBody } from '@mr/SharedTypes.js'
-import Restaurant from '../../models/Restaurant.js'
+import Auth from '@/Auth.js'
+import { app, db } from '@/app.js'
+import Offer from '@/models/Offer.js'
+import { ReqType } from '@/types.js'
+import { ICreateOfferBody } from '@shared/SharedTypes.js'
 
 app.post('/offer', async (req: ReqType<ICreateOfferBody>, res) => {
     if (!req.body
@@ -15,10 +15,9 @@ app.post('/offer', async (req: ReqType<ICreateOfferBody>, res) => {
         return
     }
 
-    const restaurant = await db.findOneBy(Restaurant, { id: req.body.restaurantId })
+    const restaurant = await Auth(req.body.adminKey, req.body.restaurantId)
 
-    if (!restaurant
-        || restaurant.adminKey != req.body.adminKey) {
+    if (!restaurant) {
         res
             .status(401)
             .send('Restaurant not found or wrong adminkey.')

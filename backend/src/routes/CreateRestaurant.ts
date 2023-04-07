@@ -1,7 +1,7 @@
-import { ReqType } from '../types.js'
-import { app, db } from '../app.js'
-import { ICreateRestaurantBody } from '@mr/SharedTypes.js'
-import Restaurant from '../models/Restaurant.js'
+import { app, db } from '@/app.js'
+import Restaurant from '@/models/Restaurant.js'
+import { ReqType } from '@/types.js'
+import { ICreateRestaurantBody } from '@shared/SharedTypes.js'
 import { v4 } from 'uuid'
 
 app.post('/restaurant', async (req: ReqType<ICreateRestaurantBody>, res) => {   

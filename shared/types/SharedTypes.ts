@@ -16,8 +16,14 @@ interface ICreateOfferBody {
     adminKey: string
 }
 
+interface ILoginBody {
+    adminKey: string
+    restaurantId: number
+}
+
 export {
     ICreateRestaurantBody,
     IGetOffersBody,
-    ICreateOfferBody
+    ICreateOfferBody,
+    ILoginBody,
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register --esm app.ts",
+    "start": "ts-node -r tsconfig-paths/register --esm src/app.ts",
     "dev": "nodemon --watch \"./**\" --ext \"ts\" --exec \"npm run start\""
   },
   "type": "module",
