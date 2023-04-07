@@ -1,8 +1,8 @@
-import Auth from '@/Auth.js'
-import { app, db } from '@/app.js'
-import Offer from '@/models/Offer.js'
-import { ReqType } from '@/types.js'
-import { ICreateOfferBody } from '@shared/SharedTypes.js'
+import Auth from 'backend/Auth.js'
+import { app, db } from 'backend/app.js'
+import Offer from 'backend/models/Offer.js'
+import { ReqType } from 'backend/types.js'
+import { ICreateOfferBody } from 'shared/SharedTypes.js'
 
 app.post('/offer', async (req: ReqType<ICreateOfferBody>, res) => {
     if (!req.body

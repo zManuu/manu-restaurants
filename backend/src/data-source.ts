@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm'
-import Restaurant from './models/Restaurant.js'
+import Restaurant from 'models/Restaurant.js'
 import config from './config.js'
-import Offer from './models/Offer.js'
+import Offer from 'models/Offer.js'
 
 export const AppDataSource = new DataSource({
     type: 'mysql',

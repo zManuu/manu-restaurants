@@ -1,5 +1,5 @@
 import { db } from './app.js'
-import Restaurant from './models/Restaurant.js'
+import Restaurant from 'models/Restaurant.js'
 
 /**
  * @param adminKey the adminKey given by the user

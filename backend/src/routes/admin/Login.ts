@@ -1,7 +1,7 @@
-import { ILoginBody } from '@shared/SharedTypes.js'
-import { ReqType } from '@/types.js'
-import { app } from '@/app.js'
-import Auth from '@/Auth.js'
+import { ILoginBody } from 'shared/SharedTypes.js'
+import { ReqType } from 'backend/types.js'
+import { app } from 'backend/app.js'
+import Auth from 'backend/Auth.js'
 
 app.get('/login', async (req: ReqType<ILoginBody>, res) => {
     if (!req.body

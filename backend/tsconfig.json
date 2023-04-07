@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
+        "outDir": "dist",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "baseUrl": "",
+        "baseUrl": "src/",
         "paths": {
-            "@shared/*": ["../shared/types/*"],
-            "@/*": ["src/*"]
+            "shared/*": ["../../shared/types/*"],
+            "backend/*": ["./*"],
+            "models/*": ["models/*"],
         },
         "module": "ESNext",
         "target": "ESNext",

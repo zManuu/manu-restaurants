@@ -1,7 +1,7 @@
-import { app, db } from '@/app.js'
-import Offer from '@/models/Offer.js'
-import { ReqType } from '@/types.js'
-import { IGetOffersBody } from '@shared/SharedTypes.js'
+import { app, db } from 'backend/app.js'
+import Offer from 'models/Offer.js'
+import { ReqType } from 'backend/types.js'
+import { IGetOffersBody } from 'shared/SharedTypes.js'
 
 app.get('/offers', async (req: ReqType<IGetOffersBody>, res) => {
     const offers = req.body && req.body.restaurantId
